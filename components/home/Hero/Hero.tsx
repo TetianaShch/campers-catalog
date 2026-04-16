@@ -1,4 +1,5 @@
 import styles from './Hero.module.css';
+import { Button } from '../../ui/Button/Button';
 
 const Hero = () => {
   return (
@@ -8,7 +9,7 @@ const Hero = () => {
         <p className={styles.text}>
           You can find everything you want in our catalog
         </p>
-        <button>View Now</button>
+        <Button>View Now</Button>
       </div>
     </section>
   );
