@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import TanStackProvider from '@/components/TanStackProvider/TanStackProvider';
+import TanStackProvider from '@/components/providers/TanStackProvider/TanStackProvider';
 import './globals.css';
 
 export const metadata: Metadata = {
