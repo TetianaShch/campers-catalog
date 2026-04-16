@@ -1,8 +1,9 @@
+import Hero from '@/components/home/Hero/Hero';
+
 export default function HomePage() {
   return (
     <main>
-      <h1>Campers catalog</h1>
-      <p>Home Page</p>
+      <Hero />
     </main>
   );
 }

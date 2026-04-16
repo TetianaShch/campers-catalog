@@ -1,0 +1,35 @@
+.hero {
+  position: relative;
+  height: 696px;
+  background-image: url('/images/CamperHero.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.content {
+  position: absolute;
+  left: 64px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-inverse);
+  width: 571px;
+  height: 176px;
+}
+
+.title {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 0.67;
+  color: var(--inputs);
+  margin-bottom: 16px;
+}
+
+.text {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33;
+  color: var(--inputs);
+  margin-bottom: 40px;
+}
