@@ -2,6 +2,7 @@ import { Camper } from '@/types/camper';
 import { Button } from '@/components/ui/Button/Button';
 import styles from './CamperCard.module.css';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface CamperCardProps {
   camper: Camper;
@@ -39,9 +40,15 @@ const CamperCard = ({ camper, isPriority = false }: CamperCardProps) => {
           <span className={styles.tag}>{camper.form}</span>
         </div>
 
-        <Button variant="filled" className={styles.button}>
-          Show more
-        </Button>
+        <Link
+          href={`/catalog/${camper.id}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button variant="filled" className={styles.button}>
+            Show more
+          </Button>
+        </Link>
       </div>
     </article>
   );
