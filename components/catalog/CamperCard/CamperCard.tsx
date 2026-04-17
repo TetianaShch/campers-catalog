@@ -5,9 +5,10 @@ import Image from 'next/image';
 
 interface CamperCardProps {
   camper: Camper;
+  isPriority?: boolean;
 }
 
-const CamperCard = ({ camper }: CamperCardProps) => {
+const CamperCard = ({ camper, isPriority = false }: CamperCardProps) => {
   return (
     <article className={styles.card}>
       <Image
@@ -16,6 +17,7 @@ const CamperCard = ({ camper }: CamperCardProps) => {
         alt={camper.name}
         width={292}
         height={320}
+        loading={isPriority ? 'eager' : 'lazy'}
       />
 
       <div className={styles.content}>
