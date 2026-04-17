@@ -1,7 +1,9 @@
 .layout {
   display: flex;
-  gap: 64px;
   align-items: flex-start;
+  gap: 65px;
+  padding-top: 48px;
+  padding-left: 63px;
 }
 
 .sidebar {
@@ -10,21 +12,21 @@
 }
 
 .content {
-  flex: 1;
-  min-width: 0;
+  width: 888px;
+  flex-shrink: 0;
 }
 
 .list {
   list-style: none;
   margin: 0;
-  padding: 48px 0 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   gap: 32px;
 }
 
 .camperItem {
-  width: 100%;
+  width: 840px;
 }
 
 .pagination {
@@ -32,4 +34,56 @@
   justify-content: center;
   margin-top: 40px;
   margin-bottom: 52px;
+}
+
+.filtersBox {
+  padding: 24px;
+  border-radius: 20px;
+  background: var(--inputs);
+}
+
+.locationLabel {
+  font-size: 14px;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.locationInput {
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: var(--white);
+  margin-bottom: 24px;
+}
+
+.filtersTitle {
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--main);
+}
+
+.filterGroup {
+  margin-bottom: 24px;
+}
+
+.groupTitle {
+  margin-bottom: 12px;
+  color: var(--main);
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.searchBtn {
+  width: 100%;
+  margin-top: 16px;
+  margin-bottom: 12px;
+}
+
+.clearBtn {
+  width: 100%;
 }
