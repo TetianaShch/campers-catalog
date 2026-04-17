@@ -1,0 +1,13 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.camperItem {
+  display: flex;
+  gap: 24px;
+  padding: 24px;
+  border-radius: 20px;
+  background: var(--inputs);
+}
