@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from '@/app/catalog/Catalog.module.css';
 import CamperCard from '@/components/catalog/CamperCard/CamperCard';
 import { Button } from '@/components/ui/Button/Button';
@@ -23,6 +23,12 @@ export default function CatalogList({
   const [page, setPage] = useState(initialPage);
   const [isLoading, setIsLoading] = useState(false);
   const [hasMore, setHasMore] = useState(initialItems.length === 4);
+
+  useEffect(() => {
+    setItems(initialItems);
+    setPage(initialPage);
+    setHasMore(initialItems.length === 4);
+  }, [filters, initialItems, initialPage]);
 
   const handleLoadMore = async () => {
     if (!hasMore || isLoading) return;
