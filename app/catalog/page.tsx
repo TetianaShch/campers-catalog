@@ -5,8 +5,22 @@ import CamperCard from '@/components/catalog/CamperCard/CamperCard';
 import { Button } from '@/components/ui/Button/Button';
 import CatalogSidebar from '@/components/catalog/CatalogSidebar/CatalogSidebar';
 
-export default async function CatalogPage() {
-  const campers = await getCampers();
+type CatalogPageProps = {
+  searchParams: Promise<{
+    form?: string;
+    transmission?: string;
+    engine?: string;
+  }>;
+};
+
+export default async function CatalogPage({ searchParams }: CatalogPageProps) {
+  const { form, transmission, engine } = await searchParams;
+
+  const campers = await getCampers({
+    form,
+    transmission,
+    engine,
+  });
 
   return (
     <main className="container">
