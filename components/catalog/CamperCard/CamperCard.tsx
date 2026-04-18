@@ -1,8 +1,11 @@
 import { Camper } from '@/types/camper';
 import { Button } from '@/components/ui/Button/Button';
+import CamperDetails from '@/components/camper/CamperDetails/CamperDetails';
 import styles from './CamperCard.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
+import { FaStar } from 'react-icons/fa';
+import { MdLocationOn } from 'react-icons/md';
 
 interface CamperCardProps {
   camper: Camper;
@@ -28,18 +31,24 @@ const CamperCard = ({ camper, isPriority = false }: CamperCardProps) => {
         </div>
 
         <div className={styles.meta}>
-          <p>⭐ {camper.rating}</p>
-          <p>{camper.location}</p>
+          <span className={styles.metaItem}>
+            <FaStar className={styles.star} />
+            {camper.rating}
+          </span>
+
+          <span className={styles.metaItem}>
+            <MdLocationOn className={styles.icon} />
+            {camper.location}
+          </span>
         </div>
 
         <p className={styles.description}>{camper.description}</p>
 
-        <div className={styles.tags}>
-          <span className={styles.tag}>{camper.engine}</span>
-          <span className={styles.tag}>{camper.transmission}</span>
-          <span className={styles.tag}>{camper.form}</span>
-        </div>
-
+        <CamperDetails
+          engine={camper.engine}
+          transmission={camper.transmission}
+          form={camper.form}
+        />
         <Link
           href={`/catalog/${camper.id}`}
           target="_blank"

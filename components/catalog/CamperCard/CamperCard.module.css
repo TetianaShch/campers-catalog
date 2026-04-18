@@ -47,6 +47,24 @@
   margin-bottom: 24px;
 }
 
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+}
+
+.star {
+  color: var(--rating);
+  width: 16px;
+  height: 16px;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+}
+
 .description {
   margin-bottom: 24px;
   color: var(--text);
