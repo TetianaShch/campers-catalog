@@ -1,0 +1,52 @@
+.wrapper {
+  padding: 44px 52px;
+  border-radius: 24px;
+  background: var(--inputs);
+}
+
+.title {
+  margin: 0 0 24px;
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--main);
+}
+
+/* ЧІПСИ */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.tag {
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: var(--badges);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ЛІНІЯ */
+.divider {
+  height: 1px;
+  background: var(--gray-light);
+  margin-bottom: 24px;
+}
+
+/* СПИСОК */
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  color: var(--main);
+}
