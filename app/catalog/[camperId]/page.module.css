@@ -1,7 +1,6 @@
 .page {
   display: flex;
   flex-direction: column;
-  gap: 40px;
   padding: 48px 64px 80px;
 }
 
@@ -42,7 +41,7 @@
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-bottom: 16px;
+  flex-wrap: wrap;
 }
 
 .location {
@@ -54,11 +53,10 @@
 .price {
   font-size: 24px;
   font-weight: 600;
-  margin: 16px 0;
 }
 
 .description {
   color: var(--text);
-  margin-bottom: 24px;
   line-height: 1.5;
+  margin-bottom: 24px;
 }
