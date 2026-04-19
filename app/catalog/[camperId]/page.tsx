@@ -1,6 +1,6 @@
 import { getCamperById } from '@/lib/campers';
 import CamperGallery from '@/components/camper/CamperGallery/CamperGallery';
-import CamperDetails from '@/components/camper/CamperDetails/CamperDetails';
+import { FiMap } from 'react-icons/fi';
 import VehicleDetails from '@/components/camper/VehicleDetails/VehicleDetails';
 import ReviewsList from '@/components/camper/ReviewsList/ReviewsList';
 import BookingForm from '@/components/camper/BookingForm/BookingForm';
@@ -30,17 +30,14 @@ export default async function CamperDetailsPage({
             <span>
               ⭐ {camper.rating} ({camper.totalReviews})
             </span>
-            <span className={styles.location}>📍 {camper.location}</span>
+            <span className={styles.location}>
+              <FiMap />
+              {camper.location}
+            </span>
           </div>
 
           <p className={styles.price}>€{camper.price}</p>
           <p className={styles.description}>{camper.description}</p>
-
-          <CamperDetails
-            engine={camper.engine}
-            transmission={camper.transmission}
-            form={camper.form}
-          />
 
           <VehicleDetails
             form={camper.form}

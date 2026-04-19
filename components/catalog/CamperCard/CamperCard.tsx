@@ -5,7 +5,7 @@ import styles from './CamperCard.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaStar } from 'react-icons/fa';
-import { MdLocationOn } from 'react-icons/md';
+import { FiMap } from 'react-icons/fi';
 
 interface CamperCardProps {
   camper: Camper;
@@ -37,7 +37,7 @@ const CamperCard = ({ camper, isPriority = false }: CamperCardProps) => {
           </span>
 
           <span className={styles.metaItem}>
-            <MdLocationOn className={styles.icon} />
+            <FiMap className={styles.icon} />
             {camper.location}
           </span>
         </div>
