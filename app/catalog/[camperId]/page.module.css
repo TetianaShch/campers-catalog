@@ -1,0 +1,22 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.topRow {
+  display: flex;
+  gap: 24px;
+}
+
+.bottomRow {
+  display: flex;
+  gap: 24px;
+}
+
+.galleryBlock,
+.reviewsBlock,
+.infoBlock,
+.formBlock {
+  flex: 1;
+}
