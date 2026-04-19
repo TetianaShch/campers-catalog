@@ -15,3 +15,8 @@
   background: var(--badges);
   font-size: 14px;
 }
+
+.tag svg {
+  width: 16px;
+  height: 16px;
+}

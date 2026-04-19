@@ -1,22 +1,64 @@
 .page {
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 40px;
+  padding: 48px 64px 80px;
 }
 
 .topRow {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 24px;
+  align-items: start;
+  margin-bottom: 88px;
 }
 
 .bottomRow {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 24px;
+  align-items: start;
 }
 
 .galleryBlock,
-.reviewsBlock,
 .infoBlock,
+.reviewsBlock,
 .formBlock {
-  flex: 1;
+  min-width: 0;
+}
+
+.infoBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.infoBlock h1,
+.infoBlock p {
+  margin: 0;
+}
+
+.ratingRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 16px 0;
+}
+
+.description {
+  color: var(--text);
+  margin-bottom: 24px;
+  line-height: 1.5;
 }

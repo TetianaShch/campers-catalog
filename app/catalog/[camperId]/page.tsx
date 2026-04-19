@@ -24,19 +24,19 @@ export default async function CamperDetailsPage({
 
         <div className={styles.infoBlock}>
           <h1>{camper.name}</h1>
-          <p>
-            ⭐ {camper.rating} ({camper.totalReviews})
-          </p>
-          <p>📍 {camper.location}</p>
-          <p>€{camper.price}</p>
-          <p>{camper.description}</p>
-
+          <div className={styles.ratingRow}>
+            <span>
+              ⭐ {camper.rating} ({camper.totalReviews})
+            </span>
+            <span className={styles.location}>📍 {camper.location}</span>
+          </div>
+          <p className={styles.price}>€{camper.price}</p>
+          <p className={styles.description}>{camper.description}</p>
           <CamperDetails
             engine={camper.engine}
             transmission={camper.transmission}
             form={camper.form}
           />
-
           <VehicleDetails
             form={camper.form}
             length={camper.length}
