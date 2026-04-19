@@ -28,7 +28,7 @@ export interface Camper {
     gallery: GalleryItem[];
     createdAt: string;
     updatedAt: string;
-
+    reviews?: Review[];
 }
 
 export interface CampersParams {
@@ -40,4 +40,11 @@ export interface CampersParams {
     engine?: 'diesel' | 'petrol' | 'hybrid' | 'electric';
 }
 
-
+export interface Review {
+    id: string;
+    camperId: string;
+    reviewer_name: string;
+    reviewer_rating: number;
+    comment: string;
+    createdAt: string;
+}

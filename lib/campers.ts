@@ -1,4 +1,5 @@
 import type { CatalogFilters } from '@/types/filters';
+import { Camper } from '@/types/camper';
 
 const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
 
@@ -22,6 +23,16 @@ export const getCampers = async (
 
     if (!response.ok) {
         throw new Error('Failed to fetch campers');
+    }
+
+    return response.json();
+};
+
+export const getCamperById = async (camperId: string): Promise<Camper> => {
+    const response = await fetch(`${BASE_URL}/${camperId}`);
+
+    if (!response.ok) {
+        throw new Error('Failed to fetch camper');
     }
 
     return response.json();
