@@ -14,7 +14,7 @@ Frontend application for browsing and booking campers.
 - Home page
 - Campers catalog
 - Camper details page
-- Filtering and pagination (in progress)
+- Filtering and Load More pagination
 
 ## Getting Started
 
@@ -33,11 +33,11 @@ npm run dev
 Open http://localhost:3000
 in your browser.
 
-API
+## API
 
 Data is fetched from:
 https://campers-api.goit.study
 
-Author
+## Author
 
 Tetiana Shcherbyna
