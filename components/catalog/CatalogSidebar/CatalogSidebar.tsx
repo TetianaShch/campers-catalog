@@ -65,8 +65,8 @@ export default function CatalogSidebar() {
           <input
             type="radio"
             name="form"
-            checked={filters.form === 'panel_van'}
-            onChange={() => handleRadioChange('form', 'panel_van')}
+            checked={filters.form === 'panelTruck'}
+            onChange={() => handleRadioChange('form', 'panelTruck')}
           />
           Panel Van
         </label>
