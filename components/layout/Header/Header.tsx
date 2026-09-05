@@ -17,6 +17,7 @@ const Header = () => {
             alt="TravelTrucks logo"
             width={136}
             height={16}
+            loading="eager"
           />
         </Link>
         <nav className={styles.nav}>
