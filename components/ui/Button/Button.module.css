@@ -2,6 +2,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 4px;
 
   min-width: 166px;
   height: 56px;
@@ -39,4 +40,14 @@
 
 .outlined:hover {
   border-color: var(--grey-green);
+}
+
+.iconWrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  line-height: 0;
+  flex-shrink: 0;
 }

@@ -7,6 +7,7 @@ import { buildQuery } from '@/lib/query';
 
 import styles from '@/app/catalog/Catalog.module.css';
 import { Button } from '@/components/ui/Button/Button';
+import { FiX } from 'react-icons/fi';
 
 export default function CatalogSidebar() {
   const [filters, setFilters] = useState<CatalogFilters>(initialFilters);
@@ -23,6 +24,7 @@ export default function CatalogSidebar() {
 
   const handleClearFilters = () => {
     setFilters(initialFilters);
+    router.push('/catalog');
   };
 
   const handleSearch = () => {
@@ -168,6 +170,7 @@ export default function CatalogSidebar() {
         variant="outlined"
         className={styles.clearBtn}
         onClick={handleClearFilters}
+        icon={<FiX size={24} aria-hidden="true" />}
       >
         Clear filters
       </Button>
