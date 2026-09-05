@@ -32,8 +32,23 @@ export default function CatalogSidebar() {
 
   return (
     <div className={styles.filtersBox}>
-      <p className={styles.locationLabel}>Location</p>
-      <div className={styles.locationInput}>Kyiv, Ukraine</div>
+      <label className={styles.locationLabel} htmlFor="location">
+        Location
+      </label>
+      <input
+        id="location"
+        className={styles.locationInput}
+        type="text"
+        name="location"
+        placeholder="City"
+        value={filters.location}
+        onChange={event =>
+          setFilters(prev => ({
+            ...prev,
+            location: event.target.value,
+          }))
+        }
+      />
       <p className={styles.filtersTitle}>Filters</p>
       <div className={styles.filterGroup}>
         <p className={styles.groupTitle}>Camper form</p>

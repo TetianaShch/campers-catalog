@@ -43,16 +43,21 @@
 }
 
 .locationLabel {
+  display: block;
   font-size: 14px;
   color: var(--text);
   margin-bottom: 8px;
 }
 
 .locationInput {
+  width: 100%;
   padding: 12px 16px;
+  border: none;
   border-radius: 12px;
   background: var(--white);
   margin-bottom: 24px;
+  font: inherit;
+  box-sizing: border-box;
 }
 
 .filtersTitle {

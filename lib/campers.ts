@@ -11,6 +11,9 @@ export const getCampers = async (
     params.set('page', String(page));
     params.set('limit', String(limit));
 
+    if (filters?.location?.trim()) {
+        params.set('location', filters.location.trim());
+    }
     if (filters?.form) params.set('form', filters.form);
     if (filters?.transmission) params.set('transmission', filters.transmission);
     if (filters?.engine) params.set('engine', filters.engine);

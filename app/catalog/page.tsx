@@ -5,6 +5,7 @@ import CatalogList from '@/components/catalog/CatalogList/CatalogList';
 
 type CatalogPageProps = {
   searchParams: Promise<{
+    location?: string;
     form?: string;
     transmission?: string;
     engine?: string;
@@ -12,9 +13,10 @@ type CatalogPageProps = {
 };
 
 export default async function CatalogPage({ searchParams }: CatalogPageProps) {
-  const { form, transmission, engine } = await searchParams;
+  const { location, form, transmission, engine } = await searchParams;
 
   const campers = await getCampers({
+    location,
     form,
     transmission,
     engine,
@@ -29,7 +31,7 @@ export default async function CatalogPage({ searchParams }: CatalogPageProps) {
         <CatalogList
           initialItems={campers.items ?? []}
           initialPage={campers.page ?? 1}
-          filters={{ form, transmission, engine }}
+          filters={{ location, form, transmission, engine }}
         />
       </div>
     </main>
