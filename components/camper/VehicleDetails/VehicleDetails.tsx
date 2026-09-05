@@ -22,14 +22,14 @@ export default function CamperSpecs({
       <h3 className={styles.title}>Vehicle details</h3>
 
       {/* ЧІПСИ */}
-      <div className={styles.features}>
-        <span className={styles.tag}>Automatic</span>
-        <span className={styles.tag}>AC</span>
-        <span className={styles.tag}>Petrol</span>
-        <span className={styles.tag}>Kitchen</span>
-        <span className={styles.tag}>Radio</span>
-        <span className={styles.tag}>Alcove</span>
-      </div>
+      <ul className={styles.features}>
+        <li className={styles.tag}>Automatic</li>
+        <li className={styles.tag}>AC</li>
+        <li className={styles.tag}>Petrol</li>
+        <li className={styles.tag}>Kitchen</li>
+        <li className={styles.tag}>Radio</li>
+        <li className={styles.tag}>Alcove</li>
+      </ul>
 
       {/* ЛІНІЯ */}
       <div className={styles.divider} />

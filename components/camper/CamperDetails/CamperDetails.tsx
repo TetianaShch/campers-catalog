@@ -13,21 +13,21 @@ type Props = {
 
 export default function CamperDetails({ engine, transmission, form }: Props) {
   return (
-    <div className={styles.tags}>
-      <div className={styles.tag}>
+    <ul className={styles.tags}>
+      <li className={styles.tag}>
         <FaGasPump />
         <span>{engine}</span>
-      </div>
+      </li>
 
-      <div className={styles.tag}>
+      <li className={styles.tag}>
         <GiGearStickPattern />
         <span>{transmission}</span>
-      </div>
+      </li>
 
-      <div className={styles.tag}>
+      <li className={styles.tag}>
         <MdOutlineDirectionsCar />
         <span>{form}</span>
-      </div>
-    </div>
+      </li>
+    </ul>
   );
 }
