@@ -43,3 +43,20 @@
 .button {
   width: 100%;
 }
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.textarea {
+  height: 118px;
+  resize: none;
+}
+
+.error {
+  color: var(--button);
+  font-size: 12px;
+  line-height: 1.3;
+}
