@@ -56,7 +56,7 @@ export default async function CamperDetailsPage({
         </div>
 
         <div className={styles.formBlock}>
-          <BookingForm />
+          <BookingForm camperId={camperId} />
         </div>
       </div>
     </div>

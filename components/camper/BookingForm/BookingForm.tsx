@@ -11,10 +11,15 @@ import {
 
 import styles from './BookingForm.module.css';
 
-export default function BookingForm() {
+type BookingFormProps = {
+  camperId: string;
+};
+
+export default function BookingForm({ camperId }: BookingFormProps) {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<BookingFormValues>({
     resolver: zodResolver(bookingSchema),
@@ -24,8 +29,21 @@ export default function BookingForm() {
     },
   });
 
-  const onSubmit = (data: BookingFormValues) => {
-    console.log(data);
+  const onSubmit = async (data: BookingFormValues) => {
+    const response = await fetch('/api/bookings', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        camperId,
+        ...data,
+      }),
+    });
+
+    if (response.ok) {
+      reset();
+    }
   };
 
   return (
