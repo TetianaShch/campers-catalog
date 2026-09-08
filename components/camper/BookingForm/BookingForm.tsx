@@ -8,6 +8,7 @@ import {
   bookingSchema,
   type BookingFormValues,
 } from '@/lib/validation/bookingSchema';
+import { toast } from 'react-hot-toast';
 
 import styles from './BookingForm.module.css';
 
@@ -30,19 +31,32 @@ export default function BookingForm({ camperId }: BookingFormProps) {
   });
 
   const onSubmit = async (data: BookingFormValues) => {
-    const response = await fetch('/api/bookings', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        camperId,
-        ...data,
-      }),
-    });
+    try {
+      const response = await fetch('/api/bookings', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          camperId,
+          ...data,
+        }),
+      });
 
-    if (response.ok) {
+      const result: { message: string } = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.message);
+      }
+
+      toast.success(result.message);
       reset();
+    } catch (error) {
+      toast.error(
+        error instanceof Error
+          ? error.message
+          : 'Booking failed. Please try again.',
+      );
     }
   };
 
