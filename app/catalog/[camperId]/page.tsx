@@ -4,6 +4,7 @@ import { FiMap } from 'react-icons/fi';
 import VehicleDetails from '@/components/camper/VehicleDetails/VehicleDetails';
 import ReviewsList from '@/components/camper/ReviewsList/ReviewsList';
 import BookingForm from '@/components/camper/BookingForm/BookingForm';
+import { notFound } from 'next/navigation';
 import styles from './page.module.css';
 
 interface CamperDetailsPageProps {
@@ -15,6 +16,10 @@ export default async function CamperDetailsPage({
 }: CamperDetailsPageProps) {
   const { camperId } = await params;
   const camper = await getCamperById(camperId);
+
+  if (!camper) {
+    notFound();
+  }
 
   return (
     <div className={styles.page}>

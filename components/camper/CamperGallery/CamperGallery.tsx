@@ -39,8 +39,9 @@ export default function CamperGallery({ gallery, name }: CamperGalleryProps) {
                 src={image.thumb}
                 alt={`${name} ${index + 1}`}
                 fill
+                sizes="(max-width: 1400px) calc((100vw - 152px) / 2), 638px"
                 className={styles.mainImage}
-                priority={index === 0}
+                loading={index === 0 ? 'eager' : 'lazy'}
               />
             </div>
           </SwiperSlide>
@@ -62,7 +63,9 @@ export default function CamperGallery({ gallery, name }: CamperGalleryProps) {
                 src={image.thumb}
                 alt={`${name} preview ${index + 1}`}
                 fill
+                sizes="136px"
                 className={styles.thumbImage}
+                loading={index === 0 ? 'eager' : 'lazy'}
               />
             </div>
           </SwiperSlide>

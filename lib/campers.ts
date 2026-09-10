@@ -31,8 +31,12 @@ export const getCampers = async (
     return response.json();
 };
 
-export const getCamperById = async (camperId: string): Promise<Camper> => {
+export const getCamperById = async (camperId: string): Promise<Camper | null> => {
     const response = await fetch(`${BASE_URL}/${camperId}`);
+
+    if (response.status === 404) {
+        return null;
+    }
 
     if (!response.ok) {
         throw new Error('Failed to fetch camper');
