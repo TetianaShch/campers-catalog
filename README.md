@@ -8,6 +8,11 @@ Frontend application for browsing and booking campers.
 - TypeScript
 - Axios
 - TanStack Query
+- React Hook Form
+- Zod
+- React Hot Toast
+- Swiper
+- CSS Modules
 
 ## Features
 
@@ -15,6 +20,10 @@ Frontend application for browsing and booking campers.
 - Campers catalog
 - Camper details page
 - Filtering and Load More pagination
+- Booking form validation
+- Booking request handling with success and error notifications
+- Form reset after a successful booking request
+- Custom 404 page for invalid routes
 
 ## Getting Started
 
