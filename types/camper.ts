@@ -8,6 +8,7 @@ export interface GalleryItem {
 
 export interface Camper {
     id: string;
+    coverImage: string;
     name: string;
     price: number;
     rating: number;

@@ -29,7 +29,7 @@ export default async function CatalogPage({ searchParams }: CatalogPageProps) {
           <CatalogSidebar />
         </aside>
         <CatalogList
-          initialItems={campers.items ?? []}
+          initialItems={campers.campers ?? []}
           initialPage={campers.page ?? 1}
           filters={{ location, form, transmission, engine }}
         />

@@ -39,7 +39,7 @@ export default function CatalogList({
       const nextPage = page + 1;
       const data = await getCampers(filters, nextPage, 4);
 
-      const newItems = data.items ?? [];
+      const newItems = data.campers ?? [];
       if (newItems.length < 4) {
         setHasMore(false);
       }

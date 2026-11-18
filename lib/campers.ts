@@ -9,7 +9,7 @@ export const getCampers = async (
     const params = new URLSearchParams();
 
     params.set('page', String(page));
-    params.set('limit', String(limit));
+    params.set('perPage', String(limit));
 
     if (filters?.location?.trim()) {
         params.set('location', filters.location.trim());

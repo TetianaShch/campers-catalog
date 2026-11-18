@@ -17,7 +17,7 @@ const CamperCard = ({ camper, isPriority = false }: CamperCardProps) => {
     <article className={styles.card}>
       <Image
         className={styles.image}
-        src={camper.gallery?.[0]?.thumb || ''}
+        src={camper.coverImage}
         alt={camper.name}
         width={292}
         height={320}
