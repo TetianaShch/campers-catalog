@@ -1,4 +1,4 @@
-import { getCamperById } from '@/lib/campers';
+import { getCamperById, getCamperReviews } from '@/lib/campers';
 import CamperGallery from '@/components/camper/CamperGallery/CamperGallery';
 import { FiMap } from 'react-icons/fi';
 import VehicleDetails from '@/components/camper/VehicleDetails/VehicleDetails';
@@ -20,6 +20,7 @@ export default async function CamperDetailsPage({
   if (!camper) {
     notFound();
   }
+  const reviews = await getCamperReviews(camperId);
 
   return (
     <div className={styles.page}>
@@ -57,7 +58,7 @@ export default async function CamperDetailsPage({
 
       <div className={styles.bottomRow}>
         <div className={styles.reviewsBlock}>
-          <ReviewsList reviews={camper.reviews || []} />
+          <ReviewsList reviews={reviews} />
         </div>
 
         <div className={styles.formBlock}>
