@@ -25,8 +25,8 @@ export interface Camper {
     height: string;
     tank: string;
     consumption: string;
-    amenities: string[] | string;
-    gallery: GalleryItem[];
+    amenities: string[];
+    gallery?: GalleryItem[];
     createdAt: string;
     updatedAt: string;
     reviews?: Review[];

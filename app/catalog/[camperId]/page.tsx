@@ -25,7 +25,7 @@ export default async function CamperDetailsPage({
     <div className={styles.page}>
       <div className={styles.topRow}>
         <div className={styles.galleryBlock}>
-          <CamperGallery gallery={camper.gallery} name={camper.name} />
+          <CamperGallery gallery={camper.gallery ?? []} name={camper.name} />
         </div>
 
         <div className={styles.infoBlock}>
